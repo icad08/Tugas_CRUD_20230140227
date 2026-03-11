@@ -9,6 +9,9 @@
 <img width="1343" height="761" alt="image" src="https://github.com/user-attachments/assets/fc8b8b6a-277d-4c66-b340-9e50ec45faea" />
 ## Delete
 <img width="1330" height="586" alt="image" src="https://github.com/user-attachments/assets/c885064e-eeb5-440f-b8d7-718377574e93" />
+# WEB
+<img width="1856" height="1199" alt="image" src="https://github.com/user-attachments/assets/6ef8b8fd-949c-4293-87d0-388233a87f36" />
+
 
 
 
