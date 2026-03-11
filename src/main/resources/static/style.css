@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 30px 20px;
+    color: #1d1d1f;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h3 {
+    color: #1d1d1f;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-section, .table-section {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group { margin-bottom: 18px; }
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    font-family: inherit;
+    font-size: 15px;
+    color: #333;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #007aff;
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15);
+}
+
+input::placeholder, textarea::placeholder { color: #888; }
+
+.form-actions { display: flex; gap: 10px; margin-top: 10px; }
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: #007aff;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+    flex: 1;
+}
+.btn-primary:hover { background: #0069d9; transform: translateY(-2px); }
+
+.btn-secondary { background: #e5e5ea; color: #333; }
+.btn-secondary:hover { background: #d1d1d6; }
+
+.btn-warning { background: #ff9500; color: white; padding: 8px 14px; margin-right: 5px; border-radius: 8px;}
+.btn-warning:hover { background: #e08300; transform: scale(1.05); }
+
+.btn-danger { background: #ff3b30; color: white; padding: 8px 14px; border-radius: 8px; }
+.btn-danger:hover { background: #e03026; transform: scale(1.05); }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+table thead { background: rgba(0, 0, 0, 0.04); }
+table th { font-weight: 600; color: #333; text-transform: uppercase; font-size: 13px; letter-spacing: 0.5px;}
+
+table tbody tr { transition: background 0.2s ease; }
+table tbody tr:hover { background: rgba(255, 255, 255, 0.5); }
+table tbody tr:last-child td { border-bottom: none; }
+
+.message-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.msg-success { background-color: rgba(52, 199, 89, 0.2); color: #155724; border: 1px solid rgba(52, 199, 89, 0.4); }
+.msg-error { background-color: rgba(255, 59, 48, 0.2); color: #721c24; border: 1px solid rgba(255, 59, 48, 0.4); }

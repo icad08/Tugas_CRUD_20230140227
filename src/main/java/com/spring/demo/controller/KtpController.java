@@ -1,6 +1,6 @@
 package com.spring.demo.controller;
 
-import com.spring.demo.model.Ktp;
+import com.spring.demo.dto.KtpDto;
 import com.spring.demo.service.KtpService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,30 +17,32 @@ public class KtpController {
     private KtpService service;
 
     @GetMapping
-    public List<Ktp> getAll() {
+    public List<KtpDto> getAll() {
         return service.getAllKtp();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable Integer id) {
-        return service.getKtpById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        try {
+            return ResponseEntity.ok(service.getKtpById(id));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping
-    public ResponseEntity<?> create(@Valid @RequestBody Ktp ktp) {
+    public ResponseEntity<?> create(@Valid @RequestBody KtpDto ktpDto) {
         try {
-            return ResponseEntity.ok(service.createKtp(ktp));
+            return ResponseEntity.ok(service.createKtp(ktpDto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@PathVariable Integer id, @Valid @RequestBody Ktp ktp) {
+    public ResponseEntity<?> update(@PathVariable Integer id, @Valid @RequestBody KtpDto ktpDto) {
         try {
-            return ResponseEntity.ok(service.updateKtp(id, ktp));
+            return ResponseEntity.ok(service.updateKtp(id, ktpDto));
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
